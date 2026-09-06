@@ -1,10 +1,7 @@
 class Solution:
     def firstMissingPositive(self, nums: List[int]) -> int:
-        mapping = Counter(nums)
-
         i = 1
         while True:
-            if i not in mapping:
+            if i not in nums:
                 return i
             i+=1
-        
