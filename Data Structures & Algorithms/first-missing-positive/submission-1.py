@@ -1,8 +1,8 @@
 class Solution:
     def firstMissingPositive(self, nums: List[int]) -> int:
+        val = set(nums)
         i = 1
-
-        while i in nums:
+        while True:
+            if i not in val:
+                return i
             i+=1
-        
-        return i
